@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form class="log-in" action="/loginProccess" method="POST">
+        <img src="../imgs/logo.png" alt="LOGO">
+        <!-- Email Input -->
+        <label for="email">Email Address *</label>
+        <input type="email" name="email" required placeholder="Enter email address">
+        <!-- Password Input -->
+        <label for="password">Password *</label>
+        <input type="password" name="password" required placeholder="********">
+        <!-- CheckBox -->
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Remember me</label>
+        </div>
+        <!-- Log In Btn -->
+        <input type="submit" value="Log in">
+        <a class="sign-up-btn btn" href="#">Sign Up</a>
+    </form>
+    <form action="/sign-up" style="display: none;" method="POST" class="sign-up">
+        <img src="../imgs/logo.png" alt="LOGO">
+        <!-- Name Input -->
+        <label for="sign-up-name">Name *</label>
+        <input type="text" name="name" id="sign-up-name" required placeholder="Enter Your Name">
+        <!-- Email Input -->
+        <label for="sign-up-phone">Phone *</label>
+        <input type="tel" id="sign-up-phone" inputmode="tel" name="phone" required placeholder="Enter Your Phone">
+        <!-- Email Input -->
+        <label for="sign-up-email">Email Address *</label>
+        <input type="email" name="email" id="sign-up-email" required placeholder="Enter Your Emaill address">
+        <!-- Password Input -->
+        <label for="password">Password *</label>
+        <input type="password" name="password" id="sign-up-password" required placeholder="********">
+        <!-- CheckBox -->
+        <div class="checkbox">
+            <input type="checkbox" id="sign-up-checkbox">
+            <label for="sign-up-checkbox">Remember me</label>
+        </div>
+        <!-- Log In Btn -->
+        <input type="submit" value="Sign Up">
+        <a class="log-in-btn btn" href="#">Log In</a>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>

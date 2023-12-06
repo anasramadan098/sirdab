@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Careem Font";
+    src: url("../CAREEM.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Careem Font';
+}
+:root {
+    --primary-color: #0b7377;
+    --second-color: #ed5f3b;
+    --container-padding: 60px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 30%;
+    background: #fff;
+    box-shadow: -7px 11px 20px -5px rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+form.sign-up img {
+    margin: 10px auto;
+}
+form img {
+    max-width: 40%;
+    margin: 40px auto;
+}
+form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+form input:not([type="checkbox"],[type="submit"]) {
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    background: #fff;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+form .checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+form .checkbox label {
+    margin-bottom: 0;
+}
+form input[type="submit"],
+.btn {
+    margin: 20px auto 0px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 17px;
+    transition: .3s;
+}
+form input[type="submit"] {
+    background: #08a7ad;
+    border: 2px solid var(--primary-color);
+    color: #fff;
+}
+.btn {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #e5e7eb;
+}
+form input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+.btn:hover {
+    background-color: #e5e7eb80;
+}

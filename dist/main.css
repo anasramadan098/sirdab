@@ -1,0 +1,637 @@
+@font-face {
+    font-family: "Careem Font";
+    src: url("CAREEM.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Careem Font';
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-color: #0b7377;
+    --second-color: #ed5f3b;
+    --container-padding: 60px;
+}
+a.btn {
+    padding: 16px 33px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    width: fit-content;
+}
+/* Start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px var(--container-padding);
+    background: #fff;
+    z-index: 1000;
+}
+header .logo {
+    max-width: 15%;
+}
+header ul.links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+header ul.links a {
+    color: #000;
+    font-weight: bold;
+}
+header ul.links a.active {
+    color: var(--primary-color);
+}
+header .btns select {
+    background: transparent;
+    border: none;
+    direction: ltr;
+    margin-left: 10px;
+    font-size: 18px;
+}
+header .btns a {
+    background: var(--primary-color);
+}
+/* how Header */
+/* Start Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 100px 0 50px;
+
+}
+.welcome .img {
+    background: url(imgs/bg-1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 70vh;
+}
+.welcome h1 {
+    font-size: 3.5em;
+}
+.welcome h1 span {
+    color: var(--primary-color);
+}
+.welcome p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+.welcome a:first-of-type {
+    background: var(--second-color);
+} 
+.welcome a:last-child {
+    background: var(--primary-color);
+}
+.welcome .text {
+    padding: 20px var(--container-padding);
+    display: flex;
+} 
+.welcome .text h3 {
+    font-weight: bold;
+    font-size: 2.8em;
+}
+.welcome .text h3 span{
+    color: var(--primary-color);
+}
+.welcome .text p {
+    color: #777;
+    font-size: 15px;
+    margin-right: 50px;
+    max-width: 400px;
+    text-align: right;
+    line-height: 2;
+} 
+/* how Welcome Section */
+/* Start Why Section */
+.why {
+    padding: 100px var(--container-padding);
+    background: var(--primary-color);
+    text-align: center;
+}
+.why h2 {
+    font-size: 3em;
+    color: #fff;
+}
+.why > p {
+    font-size: 1.2em;
+    margin: 15px 0 30px;
+    color: rgba(255, 255, 255, .6);
+}
+.why .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.why .card img {
+    height: 170px;
+}
+.why .card {
+    background: #fff;
+    padding: 38px 20px 0;
+    height: 500px;
+    border-radius: 10px;
+    min-width: calc(100% / 3 - 20px);
+}
+.why .card h3 {
+    margin: 30px 0 20px;
+    font-size: 1.7em;
+    text-align: right ;
+}
+.why .card p {
+    text-align: right ;
+    color: #777;
+    line-height: 2
+}
+/* how Why Section */
+/* Start How Section */
+.how {
+    padding: 100px var(--container-padding) 0;
+    background: #f5fbfb;
+    overflow: hidden;
+}
+.how h2 {
+    font-size: 3em;
+}
+.how > p {
+    font-size: 1.2em;
+    margin: 15px 0 30px;
+    color: #777;
+    font-weight: bold;
+}
+.how h2,
+.how > p {
+    text-align: center;
+}
+.how .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+}
+.how .step {
+    display: flex;
+    justify-content: end;
+    gap: 300px;
+    width: 100%;
+}
+.how .step * {
+    opacity: .4;
+    transition: .3s;
+}
+.how .step.active * {
+    opacity: 1;
+}
+.how .step.active .circle::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.how .step h4 {
+    font-size: 3em;
+}
+.line {
+    width: 2px;
+    height: 3300px;
+    background: #77777763;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.active-line {
+    width: 2px;
+    height: 300px;
+    background: var(--primary-color);
+}
+.circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 100;
+}
+.line > .circle {
+    z-index: 99;
+}
+.min-circle {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.how .step .text {
+    max-width: 450px;
+}
+.how .step .text h5 {
+    font-size: 2.5em;
+}
+.how .step .text p {
+    line-height: 2;
+    margin: 40px 0;
+    font-size: 20px;
+}
+.how .step .text img {
+    max-width: 100%;
+}
+/* how How Section */
+/* Start FAQ Section */
+.faq {
+    padding: 100px var(--container-padding);
+    text-align: center;
+}
+.faq h2 {
+    font-size: 3em;
+}
+.faq > p {
+    font-size: 1.3em;
+    color: #666987;
+    margin: 20px 0;
+}
+.faq .questions .q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.faq .q-holder h4 {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+.faq .q-holder p {
+    line-height: 2;
+    color: #777;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.faq .q-holder i {
+    background: #f5fbfb;
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: .6s;
+}
+.q-holder {
+    max-height: 85px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: .6s;
+}
+/* Active Questions */
+.q-holder.active {
+    max-height: 300px;
+}
+.q-holder.active i {
+    transform: rotate(45deg);
+}
+.contact-box {
+    background: var(--primary-color);
+    padding: 100px 70px 50px;
+    margin: 100px 0 60px;
+    border-radius: 30px;
+}
+.contact-box h2 {
+    color: #fff;
+}
+.contact-box p {
+    color: #e5e5e5;
+    line-height: 2;
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.contact-box a {
+    background-color: #fff;
+    display: block;
+    width: fit-content;
+    padding: 20px 35px;
+    margin: auto;
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* how FAQ Section */
+/* Start Footer */
+footer .menu {
+    border-top: 1px solid #e1f1f2;
+    padding: 30px var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+}
+footer .menu .social i {
+    font-size: 2em;
+    margin-left: 20px;
+    color: #555;
+}
+footer .menu .links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+footer .menu .links li{
+    color: #777;
+}
+footer .menu form {
+    position: relative;
+    margin-top: 30px;
+} 
+footer .menu .subscribe {
+    width: 220px;
+}
+footer .menu .subscribe input,
+footer .menu .subscribe button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #eee;
+    padding: 15px 15px;
+}
+footer .menu .subscribe input {
+    outline: none;
+    width: 100%;
+    border-radius: 7px;
+}
+footer .menu .subscribe button{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+footer p.copy {
+    padding: 25px;
+    text-align: center;
+    background: #e1f1f2;
+    color: var(--primary-color);
+}
+/* how Footer */
+/* Start privacy Page */
+.heading-page {
+    padding: 150px 0 50px;
+}
+.heading-page h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+.bg-color {
+    background-color: #f5fbfb;
+    padding: 30px var(--container-padding);
+    margin-top: 50px;
+}
+.privacy .text {
+    color: #242f55;
+    font-size: 18px;
+    line-height: 2;
+}
+/* how privacy Page */
+/* Start Price Page */
+.pricing h1 span {
+    color: var(--primary-color);
+}
+.pricing .bg-color > h2 {
+    text-align: center;
+    font-size: 3em;
+}
+.pricing .bg-color > p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+    text-align: center;
+}
+.pricing .spans {
+    margin: auto;
+    background: #fff;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 50px;
+}
+.pricing .spans span{
+    padding: 8px 25px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+.pricing .spans span.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+.pricing .plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: space-between;
+    margin: 30px 0 50px;
+}
+.pricing .plans .plan{
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: calc(100% / 4 - 10px);
+}
+.pricing .plans .plan span.name {
+    display: block;
+    margin: 5px 0 0;
+    font-size: 15px;
+}
+.pricing .plans .plan h4 {
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+.pricing .plans .plan > p.details {
+    font-size: 12px;
+    color: #777;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+}
+.pricing .plans .plan span.theme {
+    margin: 10px 0;
+    display: block;
+}
+.pricing .plans .plan .allPrice {
+    font-size: 1.2em;
+    color: #000;
+    margin-top: 40px;
+}
+.pricing .plans .plan .allPrice .price {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.pricing .plans .plan ul {
+    list-style: disc;
+    min-height: 130px;
+}
+.pricing .plans .plan ul li {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.pricing .plans .plan ul li::marker {
+    color: var(--primary-color);
+}
+.pricing .plans .plan a {
+    margin: 15px 0;
+    display: block;
+    border: 1px solid;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: .3s;
+}
+.pricing .plans .plan a:hover {
+    background-color: #0b737762;
+}
+.travel-price {
+    padding: 0 var(--container-padding);
+}
+.travel-price h2 {
+    text-align: center;
+    font-size: 3em;
+}
+.travel-price h2 span {
+    color: var(--primary-color);
+}
+.travel-price > p {
+    text-align: center;
+    margin: 30px 0;
+    color: #777;
+    font-size: 18px;
+} 
+.travel-price .cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.travel-price .cards .card {
+    border-radius: 10px;
+    background: #fff;
+    padding: 20px;
+    min-width: calc(100% / 3 - 10px);
+    box-shadow: -1px 0 8px 4px rgba(186, 186, 186, .25);
+}
+.travel-price .cards .card h5 {
+    margin: 20px 0 40px;
+    font-size: 1em;
+}
+.travel-price .cards .card div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.travel-price .cards .card div span {
+    color: #393939;
+    font-weight: bold;
+    font-size: 20px;
+}
+.travel-price .cards .card div a {
+    color: #fff;
+    background: var(--primary-color);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* how Price Page */
+.contact-box p {
+    text-align: center;
+}
+
+
+@media (max-width:767px) {
+    header,
+    .why .cards,
+    footer .menu {
+        flex-direction: column;
+    }
+    footer .menu {
+        gap: 50px;
+        padding: 30px var(--container-padding) 100px;
+    }
+    header {
+        gap: 15px;
+    }
+    .welcome {
+        padding: 200px 0 50px;
+    }
+    .welcome .text {
+        padding: 20px;
+    }
+    .welcome .text p {
+        margin-right: 0;
+        text-align: center;
+    }
+    .faq {
+        padding: 100px 20px;
+    }
+    .contact-box {
+        padding: 100px 20px 50px;
+    }
+    footer .menu .subscribe {
+        width: auto;
+    }
+    .line,
+    .circle {
+        display: none;
+    }
+    .how .step {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .bg-color {
+        padding: 30px 20px;
+    }
+    .pricing .plans,
+    .travel-price .cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .travel-price {
+        padding: 0 20px;
+    }
+    header img {
+        max-width: 55%;
+    }
+}

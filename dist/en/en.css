@@ -1,0 +1,10 @@
+body {
+    direction: ltr !important;
+}
+footer .menu .subscribe input, footer .menu .subscribe button {
+    right: 0;
+    left: auto;
+}
+.faq .q-holder p {
+    text-align: left;
+}
