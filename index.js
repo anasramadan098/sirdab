@@ -169,5 +169,5 @@ app.post('/editContent',(req,res) => {
 
 
 app.listen(8080, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port 8080`);
 });
