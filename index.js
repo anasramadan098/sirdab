@@ -3,7 +3,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const app = express();
-const port = 3000;
 const bodyParser = require('body-parser');
 
 
@@ -169,6 +168,6 @@ app.post('/editContent',(req,res) => {
 
 
 
-app.listen(port, () => {
+app.listen(8080, () => {
   console.log(`Server is running on port ${port}`);
 });
