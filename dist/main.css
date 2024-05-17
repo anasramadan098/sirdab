@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --primary-color: #0b7377;
+    --primary-color: #3b9157;
     --second-color: #ed5f3b;
     --container-padding: 60px;
 }
@@ -46,7 +46,12 @@ header {
     z-index: 1000;
 }
 header .logo {
-    max-width: 15%;
+    max-width: 7%;
+}
+@media (max-width:767px) {
+    header .logo {
+        max-width: 20%;
+    }
 }
 header ul.links {
     display: flex;

@@ -1,7 +1,8 @@
 const pricesPlans = {
-    "yearly" : [1,2,3],
-    "6-months" : [5,6,7],
-    "month" : [9,10,11]
+    // ١٧٥٤.١ | ١٢١٤.١ | ٨٤٩ 
+    "yearly" : [849,1214.1,1754.1 ],
+    "6-months" : [425,602.6,985.5],
+    "month" : [50.5,102.1,170.02]
 }
 
 const plansPriceSpan = document.querySelectorAll('.pricing .plans .plan .allPrice .price')
